@@ -20,7 +20,6 @@ Simon.prototype.addSequence = function () {
       this.sequence.push('yellow');
       break;
   }
-  console.log(this.sequence);
 };
 
 // Simon.prototype.anAction = function () {

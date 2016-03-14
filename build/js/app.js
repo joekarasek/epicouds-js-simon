@@ -21,7 +21,6 @@ Simon.prototype.addSequence = function () {
       this.sequence.push('yellow');
       break;
   }
-  console.log(this.sequence);
 };
 
 // Simon.prototype.anAction = function () {
@@ -40,12 +39,23 @@ var Simon = require('./../js/Simon.js').Simon;
 
 // Document Ready Jquery for page triggers
 $(document).ready(function() {
-  var mySimon = new Simon();
-  console.log(mySimon.sequence);
+  $('.simon_btns').hide();
+
+  // initial new game through a start game button, also hides and shows correct divs
+  $('#start_btn').click(function() {
+    var mySimon = new Simon();
+    $('.start_btn').hide();
+    $('.simon_btns').show();
+
+  })
+
+
   $('#temp_trigger').click(function() {
     console.log("Triggered");
     mySimon.addSequence();
   });
+
+
 });
 
 },{"./../js/Simon.js":1}]},{},[2]);
